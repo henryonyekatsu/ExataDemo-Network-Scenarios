@@ -1,0 +1,59 @@
+# IMPORTANT: If the Software includes one or more computer programs bearing a Keysight copyright notice and in
+# source code format (“Source Files”), such Source Files are subject to the terms and conditions of the Keysight
+# Software End-User License Agreement (“EULA”) www.Keysight.com/find/sweula and these Supplemental Terms.
+# BY USING THE SOURCE FILES, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THE EULA INCLUDING THESE
+# SUPPLEMENTAL TERMS.IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, DO NOT USE THE SOFTWARE.
+#
+#	1.	Additional Rights and Limitations. If Source Files are included with the Software, Keysight grants you
+#		a limited, non-exclusive license, without a right to sub-license, to use the Source Files solely for its
+#		intended function as part of the Software. You are not permitted to, and shall not, incorporate or use
+#		any portion of the Source Files or the algorithms and ideas therein in connection with any other software.
+#		You own any such modifications and Keysight retains all right, title and interest in the underlying
+#		Software and Source Files. All rights not expressly granted are reserved by Keysight.
+#
+#	2.	Distribution Restriction. You will not distribute the Source Files, unmodified or modified, or any
+#		Derivative File to an external party without Keysight’s prior written authorization and will be pursuant
+#		to an enforceable agreement that provides similar protections for Keysight and its suppliers as those
+#		contained in the EULA and these Supplemental Terms. “Derivative File” means any program, library or file
+#		that comprises or contains any portion of, or is in whole or in part based upon, or is a derivative work
+#		of, the Software or any executable code and/or Source Files supplied by Keysight, including, but not
+#		limited to, the simulation kernel, model libraries, or model files, or containing portions of Source
+#		Files therefrom.
+#
+#	3.	General. Capitalized terms used in these Supplemental Terms and not otherwise defined herein shall have
+#		the meanings assigned to them in the EULA. To the extent that any of these Supplemental Terms conflict
+#		with terms in the EULA, these Supplemental Terms control solely with respect to the Source Files.
+
+PURPOSE:-
+-------
+To test DOS BASIC attack capability and its effect on the victim node.
+
+SCENARIO:-
+--------
+Node 1, Node 3, Node 4 and Node 5 are connected by wired point to point 
+link with Node 2.
+Node 5 is sending CBR packets to node 2 started from 20 second to 300 
+second with the interval of .1 second.
+Four attackers (node 1, node 3, node 4 and node 5) attack victim node 
+(node 2) using BASIC DOS attack mode. Attack packets are transmitted 
+every 100 
+milli seconds.
+This effect the number of CBR packets received at node 2.
+
+APPLICATION:
+-----------
+CBR 5 2 0 3000 0.1S 20S 300S PRECEDENCE 0
+DOS 2 4 1 3 4 5 BASIC 8080 0 2047 0.1S 30S 60S
+
+RUN:-
+----
+Run '<EXATA_HOME>/bin/exata dos_basic_attack.config'.
+
+DESCRIPTION OF THE FILES:-
+------------------------
+1.dos_basic_attack.config - EXata configuration input file.
+2.dos_basic_attack.app    - EXata configuration file for application input.
+3.dos_basic_attack.nodes - EXata node configuration file.
+4.dos_basic_attack.expected.stat - EXata statistics collection.
+5.dos_basic_attack.display - EXata GUI display configuration file
+6.README - This file
