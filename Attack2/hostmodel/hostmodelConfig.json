@@ -1,0 +1,13 @@
+{
+    "HostProfiles": {
+        "HostProfile[0]": "NAS.json",
+        "HostProfile[1]": "FILE Server Profile.json",
+        "HostProfile[2]": "NoVul.json",
+        "HostProfile[3]": "General Linux User Profile.json",
+        "HostProfile[4]": "General User Profile.json"
+    },
+    "UserProfiles": {
+        "UserProfile[0]": "PhishingVeryHigh.json",
+        "UserProfile[1]": "NoAccess.json"
+    }
+}

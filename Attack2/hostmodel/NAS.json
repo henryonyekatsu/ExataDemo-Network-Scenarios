@@ -1,0 +1,117 @@
+{
+    "HostProfile": {
+        "ProfileInfo": {
+            "Name": "NAS",
+            "Ram": "2048.00",
+            "Cpu": "1000000.00",
+            "MemPackOverhead": "0.0",
+            "MemConnUsage": "0.0",
+            "CpuMaxBacklog": "10S",
+            "FailureMode": "RECOVER"
+        },
+        "Vulnerabilities": {
+            "Vulnerability[0]": {
+                "name": "VUL_DATA_TRANSFER"
+            },
+            "Vulnerability[1]": {
+                "name": "VUL_ROOT_CREDENTIALS"
+            },
+            "Vulnerability[2]": {
+                "name": "VUL_EMAIL_CREDENTIALS"
+            },
+            "Vulnerability[3]": {
+                "name": "VUL_USER_CREDENTIALS"
+            },
+            "Vulnerability[4]": {
+                "name": "NODE_SHUTDOWN"
+            },
+            "Vulnerability[5]": {
+                "name": "VUL_ACTIONS_WITHOUT_VUL"
+            },
+            "Vulnerability[6]": {
+                "name": "FILE_MODIFICATION"
+            },
+            "Vulnerability[7]": {
+                "name": "VUL_WEBSERVER"
+            },
+            "Vulnerability[8]": {
+                "name": "VUL_EXE_ARBITARY_CODE_VIA_NET"
+            },
+            "Vulnerability[9]": {
+                "name": "VUL_EMAIL"
+            },
+            "Vulnerability[10]": {
+                "name": "MALWARE_INJECTION"
+            },
+            "Vulnerability[11]": {
+                "name": "VUL_WEBSERVER_CREDENTIALS"
+            }
+        },
+        "HostProcesses": {
+            "Process[0]": {
+                "ProcessName": "Anti-Virus",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "APPLICATION"
+            },
+            "Process[1]": {
+                "ProcessName": "Telnet Server",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[2]": {
+                "ProcessName": "Database Server",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[3]": {
+                "ProcessName": "FTP Server",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[4]": {
+                "ProcessName": "Web Server",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[5]": {
+                "ProcessName": "Intrusion Detection System",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "APPLICATION"
+            },
+            "Process[6]": {
+                "ProcessName": "Remote Desktop",
+                "MemoryUsage": "5",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            }
+        },
+        "SharedFileList": {
+            "File[0]": {
+                "name": "movie1.mp4"
+            },
+            "File[1]": {
+                "name": "movie2.mp4"
+            },
+            "File[2]": {
+                "name": "movie3.mp4"
+            }
+        },
+        "NotSharedFileList": {
+            "File[0]": {
+                "name": "movie4.mp4"
+            },
+            "File[1]": {
+                "name": "movie5.mp4"
+            },
+            "File[2]": {
+                "name": "movie6.mp4"
+            }
+        }
+    }
+}

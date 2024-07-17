@@ -1,0 +1,33 @@
+{
+    "HostProfile": {
+        "ProfileInfo": {
+            "Name": "General Linux User Profile",
+            "Ram": "2048",
+            "Cpu": "10000000",
+            "MemPackOverhead": "0",
+            "MemConnUsage": "0",
+            "CpuMaxBacklog": "10S",
+            "FailureMode": "RECOVER"
+        },
+        "Vulnerabilities": {
+            "Vulnerability[0]": {
+                "name": "NETWORK_INTERFACE_SHUTDOWN"
+            },
+            "Vulnerability[1]": {
+                "name": "VUL_WEBSERVER"
+            },
+            "Vulnerability[2]": {
+                "name": "VUL_USER_CREDENTIALS"
+            },
+            "Vulnerability[3]": {
+                "name": "VUL_ROOT_CREDENTIALS"
+            },
+            "Vulnerability[4]": {
+                "name": "VUL_WEBSERVER_CREDENTIALS"
+            },
+            "Vulnerability[5]": {
+                "name": "DESKTOP_REBOOT"
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "HostProfile": {
+        "ProfileInfo": {
+            "Name": "General User Profile",
+            "Ram": "2048.00",
+            "Cpu": "10000.00",
+            "MemPackOverhead": "0.0",
+            "MemConnUsage": "0.0",
+            "CpuMaxBacklog": "10S",
+            "FailureMode": "RECOVER"
+        },
+        "Vulnerabilities": {
+            "Vulnerability[0]": {
+                "name": "VUL_DATABASE_CREDENTIALS"
+            },
+            "Vulnerability[1]": {
+                "name": "VUL_USER_CREDENTIALS"
+            },
+            "Vulnerability[2]": {
+                "name": "VUL_WEBSERVER_CREDENTIALS"
+            },
+            "Vulnerability[3]": {
+                "name": "VUL_EMAIL_CREDENTIALS"
+            },
+            "Vulnerability[4]": {
+                "name": "VUL_ACTIONS_WITHOUT_VUL"
+            },
+            "Vulnerability[5]": {
+                "name": "VUL_WEBSERVER"
+            },
+            "Vulnerability[6]": {
+                "name": "SQL_INJECTION"
+            },
+            "Vulnerability[7]": {
+                "name": "MALWARE_INJECTION"
+            }
+        },
+        "HostProcesses": {
+            "Process[0]": {
+                "ProcessName": "Web Server",
+                "MemoryUsage": "50",
+                "CpuUsage": "10",
+                "Type": "SERVER"
+            },
+            "Process[1]": {
+                "ProcessName": "Database Server",
+                "MemoryUsage": "50",
+                "CpuUsage": "10",
+                "Type": "SERVER"
+            },
+            "Process[2]": {
+                "ProcessName": "Anti-Virus",
+                "MemoryUsage": "50",
+                "CpuUsage": "10",
+                "Type": "APPLICATION"
+            }
+        }
+    }
+}

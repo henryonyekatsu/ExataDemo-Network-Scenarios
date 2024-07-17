@@ -1,0 +1,13 @@
+{
+    "HostProfile": {
+        "ProfileInfo": {
+            "Name": "NoVul",
+            "Ram": "2048.00",
+            "Cpu": "1000000000.00",
+            "MemPackOverhead": "0.0",
+            "MemConnUsage": "0.0",
+            "CpuMaxBacklog": "10S",
+            "FailureMode": "RECOVER"
+        }
+    }
+}
