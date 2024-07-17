@@ -1,0 +1,37 @@
+CPU Info:
+  cpu 0, numa_node 0, package 0, core 0, busy 5.168%, thread_count 68, irqs 0
+  cpu 1, numa_node 0, package 0, core 0, busy 5.168%, thread_count 68, irqs 0
+  cpu 2, numa_node 0, package 0, core 1, busy 5.168%, thread_count 68, irqs 0
+  cpu 3, numa_node 0, package 0, core 1, busy 5.168%, thread_count 68, irqs 0
+  cpu 4, numa_node 0, package 0, core 2, busy 5.168%, thread_count 68, irqs 0
+  cpu 5, numa_node 0, package 0, core 2, busy 5.168%, thread_count 68, irqs 0
+  cpu 6, numa_node 0, package 0, core 3, busy 5.168%, thread_count 68, irqs 0
+  cpu 7, numa_node 0, package 0, core 3, busy 5.168%, thread_count 68, irqs 0
+  cpu 8, numa_node 0, package 0, core 4, busy 5.168%, thread_count 68, irqs 0
+  cpu 9, numa_node 0, package 0, core 4, busy 5.168%, thread_count 68, irqs 0
+  cpu 10, numa_node 0, package 0, core 5, busy 5.168%, thread_count 68, irqs 0
+  cpu 11, numa_node 0, package 0, core 5, busy 5.168%, thread_count 68, irqs 0
+  cpu 12, numa_node 0, package 0, core 6, busy 5.168%, thread_count 68, irqs 0
+  cpu 13, numa_node 0, package 0, core 6, busy 5.168%, thread_count 68, irqs 0
+  cpu 14, numa_node 0, package 0, core 7, busy 5.168%, thread_count 68, irqs 0
+  cpu 15, numa_node 0, package 0, core 7, busy 5.168%, thread_count 68, irqs 0
+  cpu 16, numa_node 0, package 0, core 8, busy 5.168%, thread_count 68, irqs 0
+  cpu 17, numa_node 0, package 0, core 9, busy 5.168%, thread_count 68, irqs 0
+  cpu 18, numa_node 0, package 0, core 10, busy 5.168%, thread_count 68, irqs 0
+  cpu 19, numa_node 0, package 0, core 11, busy 5.168%, thread_count 68, irqs 0
+NUMA Node 0:  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+CPU Core Info:
+  Core (0, 0):  0, 1    score -2.14748e+06%
+  Core (0, 1):  2, 3    score -2.14748e+06%
+  Core (0, 2):  4, 5    score -2.14748e+06%
+  Core (0, 3):  6, 7    score -2.14748e+06%
+  Core (0, 4):  8, 9    score -2.14748e+06%
+  Core (0, 5):  10, 11    score -2.14748e+06%
+  Core (0, 6):  12, 13    score -2.14748e+06%
+  Core (0, 7):  14, 15    score -2.14748e+06%
+  Core (0, 8):  16    score -2.14748e+06%
+  Core (0, 9):  17    score -2.14748e+06%
+  Core (0, 10):  18    score -2.14748e+06%
+  Core (0, 11):  19    score -2.14748e+06%
+partition_cpus:  0
+other_cpus:  2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
