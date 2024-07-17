@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\jenkins\workspace\Exata_Release\build-exata-vc14\tools\TopologyConverterSolarwinds\virtual_env\Lib\site-packages\cx_Freeze\initscripts\__startup__.py", line 139, in run
+  File "C:\jenkins\workspace\Exata_Release\build-exata-vc14\tools\TopologyConverterSolarwinds\virtual_env\Lib\site-packages\cx_Freeze\initscripts\console.py", line 18, in run
+  File "tc_solarwinds.py", line 18, in <module>
+  File "C:\jenkins\workspace\Exata_Release\exata\tools\TopologyConverterSolarwinds\tc_solarwinds\main.py", line 26, in main
+  File "C:\jenkins\workspace\Exata_Release\exata\tools\TopologyConverterSolarwinds\tc_solarwinds\db_data.py", line 69, in db_get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'C:/Users/honyeka/Documents/UserScenarios/5g/NodeData.csv'
+
