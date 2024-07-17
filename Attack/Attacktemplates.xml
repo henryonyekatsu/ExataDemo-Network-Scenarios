@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Attacks>
+    <Attack type="VULNERABILITY">
+        <name>NodeShutdown</name>
+        <property key="ATTACKNAME">NodeShutdown</property>
+        <property key="ATTACKER">Node 1 (190.0.1.1)</property>
+        <property key="VICTIM">Node 1 (190.0.1.1)</property>
+        <property key="VULNERABILITY">NODE_SHUTDOWN</property>
+        <property key="ACTION">SHUTDOWN_NODE</property>
+        <property key="SIGNATURE">sryjsertjaetjaetja</property>
+    </Attack>
+    <Attack type="VULNERABILITY">
+        <name>RootCred</name>
+        <property key="CYBER-ATTACK-NAME">VULNERABILITY</property>
+        <property key="ATTACKER">Node 1 (190.0.1.1)</property>
+        <property key="VICTIM">Node 1 (190.0.1.1)</property>
+        <property key="VULNERABILITY">VUL_ROOT_CREDENTIALS</property>
+        <property key="ACTION">STEAL_ROOT_CREDENTIALS</property>
+        <property key="SIGNATURE">WRGAWRgawerg</property>
+    </Attack>
+    <Attack type="SE-ATTACK">
+        <name>PhishingEmailRootCred</name>
+        <property key="ATTACKNAME">PhishingEmailRootCred</property>
+        <property key="SE-ATTACK-TYPE">MALEMAIL</property>
+        <property key="ATTACKER">Node 1 (190.0.1.1)</property>
+        <property key="VICTIM">Node 1 (190.0.1.1)</property>
+        <property key="VULNERABILITY">VUL_ROOT_CREDENTIALS</property>
+        <property key="PHISHING-EMAIL-TYPE">ATTACHMENT</property>
+        <property key="MALWEBSERVER">Node 1 (190.0.1.1)</property>
+        <property key="SIGNATURE">ethaethaethaeth</property>
+        <property key="ACTION">STEAL_ROOT_CREDENTIALS</property>
+    </Attack>
+    <Attack type="DOS">
+        <name>DosAttack</name>
+        <property key="ATTACKNAME">DosAttack</property>
+        <property key="CONFIGURE-RATE-INTERVAL">RATE</property>
+        <property key="RATE">1000</property>
+        <property key="DOS-DURATION">10M</property>
+        <property key="RAMP-UP-TIME">0S</property>
+    </Attack>
+    <Attack type="VULNERABILITY">
+        <name>UserCred</name>
+        <property key="CYBER-ATTACK-NAME">VULNERABILITY</property>
+        <property key="ATTACKER">Node 1 (190.0.1.1)</property>
+        <property key="VICTIM">Node 1 (190.0.1.1)</property>
+        <property key="VULNERABILITY">VUL_USER_CREDENTIALS</property>
+        <property key="ACTION">STEAL_USER_CREDENTIALS</property>
+        <property key="SIGNATURE">erthaewrhawerha</property>
+    </Attack>
+    <Attack type="NetScan">
+        <name>NetScan</name>
+        <property key="ATTACKNAME">NetScan</property>
+    </Attack>
+</Attacks>

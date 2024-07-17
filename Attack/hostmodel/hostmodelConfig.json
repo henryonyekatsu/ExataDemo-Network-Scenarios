@@ -1,0 +1,11 @@
+{
+    "HostProfiles": {
+        "HostProfile[0]": "AllVulNoWebSever.json",
+        "HostProfile[1]": "AllVullWebServer.json",
+        "HostProfile[2]": "LowCPU.json"
+    },
+    "UserProfiles": {
+        "UserProfile[0]": "test-profile.json",
+        "UserProfile[1]": "extremelyProne.json"
+    }
+}

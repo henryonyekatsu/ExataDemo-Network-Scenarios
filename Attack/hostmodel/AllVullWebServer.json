@@ -1,0 +1,153 @@
+{
+    "HostProfile": {
+        "ProfileInfo": {
+            "Name": "AllVullWebServer",
+            "Ram": "2048.00",
+            "Cpu": "1000000.00",
+            "MemPackOverhead": "0.0",
+            "MemConnUsage": "0.0",
+            "CpuMaxBacklog": "10S",
+            "FailureMode": "RECOVER"
+        },
+        "Vulnerabilities": {
+            "Vulnerability[0]": {
+                "name": "NETWORK_INTERFACE_SHUTDOWN"
+            },
+            "Vulnerability[1]": {
+                "name": "SQL_INJECTION"
+            },
+            "Vulnerability[2]": {
+                "name": "ROUTER_REBOOT"
+            },
+            "Vulnerability[3]": {
+                "name": "FILE_MODIFICATION"
+            },
+            "Vulnerability[4]": {
+                "name": "DATABASE_SHUTDOWN"
+            },
+            "Vulnerability[5]": {
+                "name": "EMAIL_CLIENT_SHUTDOWN"
+            },
+            "Vulnerability[6]": {
+                "name": "VUL_EMAIL_CREDENTIALS"
+            },
+            "Vulnerability[7]": {
+                "name": "VUL_ROOT_CREDENTIALS"
+            },
+            "Vulnerability[8]": {
+                "name": "ENTERPRISE_SERVER_SHUTDOWN"
+            },
+            "Vulnerability[9]": {
+                "name": "VUL_EXE_ARBITARY_CODE_VIA_NET"
+            },
+            "Vulnerability[10]": {
+                "name": "DATABASE_MODIFICATION"
+            },
+            "Vulnerability[11]": {
+                "name": "VUL_EMAIL"
+            },
+            "Vulnerability[12]": {
+                "name": "VUL_WEBSERVER"
+            },
+            "Vulnerability[13]": {
+                "name": "RESET_ROUTER"
+            },
+            "Vulnerability[14]": {
+                "name": "VUL_ROUTING_TABLE"
+            },
+            "Vulnerability[15]": {
+                "name": "VUL_USER_CREDENTIALS"
+            },
+            "Vulnerability[16]": {
+                "name": "VUL_WEBSERVER_CREDENTIALS"
+            },
+            "Vulnerability[17]": {
+                "name": "ROUTER_DATA_MODIFICATION"
+            },
+            "Vulnerability[18]": {
+                "name": "MALWARE_INJECTION"
+            },
+            "Vulnerability[19]": {
+                "name": "DESKTOP_REBOOT"
+            },
+            "Vulnerability[20]": {
+                "name": "NODE_SHUTDOWN"
+            },
+            "Vulnerability[21]": {
+                "name": "VUL_DATABASE_CREDENTIALS"
+            }
+        },
+        "HostProcesses": {
+            "Process[0]": {
+                "ProcessName": "Intrusion Detection System",
+                "MemoryUsage": "100",
+                "CpuUsage": "5",
+                "Type": "APPLICATION"
+            },
+            "Process[1]": {
+                "ProcessName": "Anti-Virus",
+                "MemoryUsage": "100",
+                "CpuUsage": "5",
+                "Type": "APPLICATION"
+            },
+            "Process[2]": {
+                "ProcessName": "Database Server",
+                "MemoryUsage": "50",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[3]": {
+                "ProcessName": "Enterprise Service",
+                "MemoryUsage": "50",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[4]": {
+                "ProcessName": "FTP Server",
+                "MemoryUsage": "5",
+                "CpuUsage": "1",
+                "Type": "SERVER"
+            },
+            "Process[5]": {
+                "ProcessName": "Remote Desktop",
+                "MemoryUsage": "100",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[6]": {
+                "ProcessName": "Telnet Server",
+                "MemoryUsage": "50",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            },
+            "Process[7]": {
+                "ProcessName": "Web Server",
+                "MemoryUsage": "50",
+                "CpuUsage": "5",
+                "Type": "SERVER"
+            }
+        },
+        "SharedFileList": {
+            "File[0]": {
+                "name": "abc.txt"
+            },
+            "File[1]": {
+                "name": "ftp.exe"
+            },
+            "File[2]": {
+                "name": "data.xls"
+            }
+        },
+        "NotSharedFileList": {
+            "File[0]": {
+                "name": "cba.txt"
+            },
+            "File[1]": {
+                "name": "ptf.exe"
+            },
+            "File[2]": {
+                "name": "atad.xls"
+            }
+        }
+    }
+}

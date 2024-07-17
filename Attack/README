@@ -1,0 +1,128 @@
+Purpose:
+To demonstrate how adaptive attack scripts can be used to create and launch sequence of attacks.
+And also adapt the sequence according to the result of previous attack.
+
+2015 Ukraine Power Grid Attack is used to demonstrate this feature.
+The network is an abstract representation, consisting of Corporate, SCADA, Grid and Call Center networks.
+
+Scenario:
+                                                |
+                                                |
+     [Attacker1] [Attacker2] [Attacker3]        |
+               \      |      /                  |        [Customer1] [Customer2]
+                \     |     /                   |              \         /
+                 \    |    /                    |               \       /
+                  \   |   /                     |                \     /
+                 [ SWITCH ]                     |              [ SWITCH ]
+                      |                         |                   |
+______________________|_________________________|___________________|___________________
+                      |                         |                   |
+**Corporate Network** |                         |                   |
+                      |                         |                   |
+            [CorporateFirewall]-----------------|---------------[ SWITCH ]
+                      |                         |
+                      |                         |
+         [Server]     |    [User3]              |
+               \      |     /                   |
+                \     |    /                    |              **Call Center Network**
+                 \    |   /                     |
+                 [ SWITCH ]                     |              [agent1]        [agent2]
+                 /    |   \                     |                   \            /
+                /     |    \                    |                    \          /
+               /      |     \                   |                     \        /
+         [User1]      |    [InternalFirewall]---|--[router]-----------[ SWITCH ]
+                      |           |             |                     /        \
+                   [User2]        |             |                    /          \
+                                  |             |                   /            \
+                                  |             |               [agent4]        [agent3]
+                                  |             |
+__________________________________|_____________|_______________________________________
+                                  |
+                                  |
+                                  |
+                                  |                      [station1]
+                                  |    [HMI1]                 |
+           **SCADA Network**      |     /                     |      **Grid Network**
+                                  |    /                      |
+                                  |   /                       |
+            [UPS]------------[ SWITCH ]------------------[ SWITCH ]-------[station2]
+                                  |                        /     \
+                                  |                       /       \
+                                  |                      /         \
+                                  |                [station3]     [HMI2]
+                                [PLC]
+
+1. A corporate network with 2 firewall nodes, 3 User nodes and 1 server node.
+2. A SCADA network with 1 HMI, 1 UPS and 1 PLC nodes.
+3. A Grid network with 3 grid stations and 1 HMI node.
+4. A Call center network with 4 customer service representatives.
+5. An external network with 3 attacker nodes.
+6. Another external network with 2 customer nodes.
+
+Adaptive Attack Scripts:
+1. Grid Shutdown: Purpose of this script is to gain access on important nodes via phishing and vulnerability attacks
+                  and shutdown the grid nodes.
+    a. Phishing Email to Corporate Network Users.
+    b. If the phishing email is successful, a root access attack is initiated on the victim.
+    c. If the root access attack fails, a user access attack is initiated on the same victim.
+    d. If the user access attack is successful then the failed root access attack is initiated again.
+    e. If now the root access attack is successful then a network scan is initiated for the SCADA and the grid network.
+    f. A different root access attack is initiated on the IP-addresses found in the network scan.
+    h. Similar to point c and d, sequence of root and user access attack are used to gain root access on the scanned nodes.
+    i. The nodes where root access is successful a node shutdown attack is initiated.
+    j. The nodes get shutdown if they have the required vulnerability.
+
+2. Call Center DOS Attack: Purpose of this script is to initiate distributed DOS attack on the call center nodes
+                           so that the Customer nodes cannot connect to the customer service representatives to
+                           report the power failure.
+    a. A network scan is initiated for the Call Center Network network.
+    b. DOS attacks are initiated from the attacker nodes on the IP-addresses found in the network scan.
+
+How to run the adaptive attack scripts:
+1. To run the script attack templates are required. These attack templates are there in the "Attacktemplates.xml".
+   Either create the attack templates using the Attack Template Editor or do the following:
+   a. Go to the EXata user directory
+      (Windows: %HOME%/.exataUserDir/exata_<version>/, Linux: $HOME/.exataUserDir/exata_<version>).
+   b. Rename "Attacktemplates.xml" (if present) to "Attacktemplates.old.xml".
+   c. Copy "Attacktemplates.xml" from this scenario directory.
+   * After the script is executed, delete this copied file "Attacktemplates.xml"
+     and rename "Attacktemplates.old.xml" to "Attacktemplates.xml".
+2. Execute this scenario in EXataGUI or Scenario Player in emulation mode.
+3. Open "Adaptive Attack Manager", browse and open the "GridShutdown.js".
+4. Provide the appropriate Timeout time.
+5. Launch the script.
+6. Click on the "View Log" button to view the log of the attacks.
+7. Once the "GridShutdown.js" is finished, launch the "CallCenterDOSAttack.js".
+8. Click on the "View Log" button to view the log of the attacks.
+
+Files:
+1. UkraineAttack.config:        Main configuration file.
+2. UkraineAttack.app:           Application file.
+3. UkraineAttack.nodes:         Node position file.
+4. UkraineAttack.expected.stat: Expected statistics file.
+5. UkraineAttack.display:       Display setting file.
+6. README.txt:                  This file.
+7. Attacktemplates.xml:         Attack templates file.
+8. background.png:              Canvas background file.
+9. firewall.png:                Firewall icon png file.
+10. grid-station1.png:          grid-station icon png file.
+11. HMI-Hex-Icon_Large.png:     HMI icon png file.
+12. laptop.png:                 Laptop icon png file.
+13. monitor.png:                Monitor icon png file.
+14. phone-icon.png:             Phone icon png file.
+15. phone-icon1.png:            Another phone icon png file.
+16. PLC-Hex-Icon_Large.png:     PLC icon png file.
+17. server.png:                 Server icon png file.
+18. ups.png:                    UPS icon png file
+19. hostmodel:                  Folder containing Hostmodel Configuration Files
+    a. AllVullWebServer.json:       Configuration for host profile named "AllVullWebServer".
+    b. AllVulNoWebSever.json:       Configuration for host profile named "AllVulNoWebSever".
+    c. LowCPU.json:                 Configuration for host profile named "LowCPU".
+    d. test-profile.json:           Configuration for host profile named "test-profile".
+    e. extremelyProne.json:         Configuration for user profile named "extremelyProne".
+    f. hostmodelConfig.json:        This file list all the host and user profiles and the configuration file names.
+20 adaptiveAttackScripts:       Folder containing Adaptive Attack Script files.
+    a. GridShutdown.flowchart:      Adaptive attack flowchart editor config file for "GridShutdown" Adaptive Attack Script.
+    b. GridShutdown.js:             The generated JavaScript file for "GridShutdown" Adaptive Attack Script.
+    c. CallCenterDOS.flowchart:     Adaptive attack flowchart editor config file for "CallCenterDOS" Adaptive Attack Script.
+    d. CallCenterDOS.js:            The generated JavaScript file for "CallCenterDOS" Adaptive Attack Script.
